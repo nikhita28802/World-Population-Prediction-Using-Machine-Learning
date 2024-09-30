@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}Population Prediction Form{% endblock %}
+
+{% block content %}
+<div class="card">
+    <div class="card-header">
+        Population Prediction Form
+    </div>
+    <div class="card-body">
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <label for="population_2020">Population 2020:</label>
+                <input type="text" class="form-control" id="population_2020" name="population_2020" placeholder="Enter population in 2020" required>
+            </div>
+            <div class="form-group">
+                <label for="population_2015">Population 2015:</label>
+                <input type="text" class="form-control" id="population_2015" name="population_2015" placeholder="Enter population in 2015" required>
+            </div>
+            <div class="form-group">
+                <label for="population_2010">Population 2010:</label>
+                <input type="text" class="form-control" id="population_2010" name="population_2010" placeholder="Enter population in 2010" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Area (km²):</label>
+                <input type="text" class="form-control" id="area" name="area" placeholder="Enter area in square kilometers" required>
+            </div>
+            <div class="form-group">
+                <label for="density">Density (per km²):</label>
+                <input type="text" class="form-control" id="density" name="density" placeholder="Enter population density" required>
+            </div>
+            <div class="form-group">
+                <label for="growth_rate">Growth Rate (%):</label>
+                <input type="text" class="form-control" id="growth_rate" name="growth_rate" placeholder="Enter growth rate" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
